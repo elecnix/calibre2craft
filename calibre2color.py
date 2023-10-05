@@ -52,7 +52,7 @@ def convert_calibre_to_md(json_file_path):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python calibre2md.py <input_json_file>")
+        print("Usage: python calibre2color.py <input_json_file>")
         sys.exit(1)
 
     json_file_path = sys.argv[1]

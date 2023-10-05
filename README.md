@@ -1,6 +1,6 @@
-# calibre2craft
+# calibre2color
 
-Converts from Calibre JSON highlight to Markdown.
+Converts from Calibre JSON highlight to colored Markdown.
 
 Calibre can export to Markdown, but does not preserve coloring. This script uses the JSON export to preserve colors by adding unicode color markers.
 
