@@ -30,11 +30,15 @@ def convert_calibre_to_md(json_file_path):
         chapter_info = tuple(highlight.get('toc_family_titles', []))
         chapter_group[chapter_info].append(highlight)
 
+    last_header = [None] * 10  # Initialize last header for each level, assuming no more than 10 levels
+
     # Loop through each grouped chapter and append to Markdown content
     for chapter_info, highlights in chapter_group.items():
         for i, title in enumerate(chapter_info):
-            md_content += f"{'#' * (i + 2)} {title}\n\n"
-        
+            if title != last_header[i]:  # Only print header if it has changed
+                md_content += f"{'#' * (i + 2)} {title}\n\n"
+                last_header[i] = title  # Update last header for this level
+
         for highlight in highlights:
             color = highlight.get('style', {}).get('which', 'black')
             unicode_marker = color_mapping.get(color, '⚫')
