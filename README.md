@@ -24,6 +24,7 @@ Simplified calibre JSON export example:
         "highlights": [
             {
                 "highlighted_text": "In fact, research by Google on their own teams found that who is on the team matters less than the team dynamics; and that when it comes to measuring performance, teams matter more than individuals.",
+                "notes": "Look into this",
                 "style": {
                     "kind": "color",
                     "type": "builtin",
@@ -47,6 +48,8 @@ Sample output:
     ### Chapter 3: Team-First Thinking
 
     🟡 In fact, research by Google on their own teams found that who is on the team matters less than the team dynamics; and that when it comes to measuring performance, teams matter more than individuals.
+    
+    > Look into this
 
 Multi-line highlights are represented as bullet items:
 
