@@ -1,5 +1,6 @@
 import json
 import sys
+import os
 
 # Mapping of Calibre colors to Unicode markers
 color_mapping = {
@@ -48,7 +49,8 @@ def convert_calibre_to_md(json_file_path):
             md_content += f"> {notes}\n\n"
 
     # Write to Markdown file
-    md_file_path = json_file_path.replace('.json', '.md')
+    name, ext = os.path.splitext(json_file_path)
+    md_file_path = f"{name}.md"
     with open(md_file_path, 'w') as f:
         f.write(md_content)
 
